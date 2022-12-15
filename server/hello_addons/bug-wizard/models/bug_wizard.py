@@ -18,7 +18,7 @@ class bugWizard(models.TransientModel):
         defaults['bug_ids'] = self.env.context['active_ids']
         return defaults
 
-    @api.multi
+    @api.model
     def update_batch(self):
         self.ensure_one()
         if not (self.new_is_closed or self.wizard_user_id):
@@ -33,13 +33,13 @@ class bugWizard(models.TransientModel):
             self.bug_ids.write(vals)
         return True
 
-    @api.multi
+    @api.model
     def count_bugs(self):
         bug = self.env['bm.bug']
         count = bug.search_count([])
         raise exceptions.Warning('有%d条bug' % count)
 
-    @api.multi
+    @api.model
     def helper_form(self):
         self.ensure_one()
         return {
@@ -50,7 +50,7 @@ class bugWizard(models.TransientModel):
             'view_mode': 'form',
             'target': 'new'}
 
-    @api.multi
+    @api.model
     def get_bugs(self):
         self.ensure_one()
         bug = self.env['bm.bug']
