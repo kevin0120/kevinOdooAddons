@@ -42,7 +42,7 @@ odoo.define('app_odoo_customize.UserMenu', function (require) {
                         + '"><img class="flag" src="app_odoo_customize/static/src/img/flags/' + lang['code'] + '.png"/>' + lang['name'] + a + '</a>';
                 });
                 lang_list += '<div role="separator" class="dropdown-divider"/>';
-                setTimeout( function() {
+                setTimeout(function () {
                     $('switch-lang').replaceWith(lang_list);
                 }, 1000);
             })

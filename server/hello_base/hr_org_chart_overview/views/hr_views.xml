@@ -7,10 +7,10 @@
             <field name="target">main</field>
         </record>
         <menuitem
-            parent="hr.hr_menu_hr_reports"
-            id="menu_org_chart_overview_report"
-            action="action_org_chart_overview"
-            sequence="1"
+                parent="hr.hr_menu_hr_reports"
+                id="menu_org_chart_overview_report"
+                action="action_org_chart_overview"
+                sequence="1"
         />
     </data>
 </odoo>

@@ -1,6 +1,6 @@
 import logging
-_logger = logging.getLogger(__name__)
 
+_logger = logging.getLogger(__name__)
 
 try:
     from html2text import HTML2Text

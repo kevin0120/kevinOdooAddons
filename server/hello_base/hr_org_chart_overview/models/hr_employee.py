@@ -30,8 +30,8 @@ class HrEmployee(models.Model):
             "title": self.job_id.name,
             "className": org_chart_classes[level],
             "image": self.env["ir.attachment"]
-            .sudo()
-            .search(
+                .sudo()
+                .search(
                 [
                     ("res_model", "=", "hr.employee"),
                     ("res_id", "=", self.id),
@@ -39,7 +39,7 @@ class HrEmployee(models.Model):
                 ],
                 limit=1,
             )
-            .datas,
+                .datas,
         }
 
     @api.model

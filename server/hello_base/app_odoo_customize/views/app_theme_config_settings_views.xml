@@ -17,7 +17,9 @@
                         <div>
                             <field name="app_system_name"/>
                             <div>
-                                <a href="https://www.oneshare.com.cn" target="_blank">Visit our website for more apps and Support. https://www.oneshare.com.cn</a>
+                                <a href="https://www.oneshare.com.cn" target="_blank">Visit our website for more apps
+                                    and Support. https://www.oneshare.com.cn
+                                </a>
                             </div>
                         </div>
                     </group>
@@ -120,12 +122,14 @@
                         </div>
                         <div class="col-12 col-lg-12 mb4">
                             <span class="col-3 col-lg-2 text-left">POS</span>
-                            <button string="Delete All POS Order" type="object" name="remove_pos" confirm="Please confirm to delete the select data?"
+                            <button string="Delete All POS Order" type="object" name="remove_pos"
+                                    confirm="Please confirm to delete the select data?"
                                     class="oe_highlight"/>
                         </div>
                         <div class="col-12 col-lg-12 mb4">
                             <span class="col-3 col-lg-2 text-left">Purchase</span>
-                            <button string="Delete All Purchase Order and Requisition" type="object" name="remove_purchase"
+                            <button string="Delete All Purchase Order and Requisition" type="object"
+                                    name="remove_purchase"
                                     confirm="Please confirm to delete the select data?" class="oe_highlight"/>
                         </div>
                         <div class="col-12 col-lg-12 mb4">
@@ -148,7 +152,9 @@
                         </div>
                         <div class="col-12 col-lg-12 mb4">
                             <span class="col-3 col-lg-2 text-left">
-                                Accounting <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." groups="base.group_multi_company"/>
+                                Accounting
+                                <span class="fa fa-lg fa-building-o" title="Values set here are company-specific."
+                                      groups="base.group_multi_company"/>
                             </span>
                             <button string="Delete All Voucher/Invoice/Bill" type="object" name="remove_account"
                                     confirm="Please confirm to delete the select data?" class="oe_highlight"/>
@@ -188,11 +194,13 @@
                             <button string="Delete All Workflow" type="object" name="remove_workflow"
                                     confirm="Please confirm to delete the select data?" class="oe_highlight"/>
                             |
-                            <button string="Reset Category And Location Complete Name" type="object" name="reset_cat_loc_name" class="oe_highlight"/>
+                            <button string="Reset Category And Location Complete Name" type="object"
+                                    name="reset_cat_loc_name" class="oe_highlight"/>
                         </div>
                         <div class="col-12 col-lg-12 mb4">
                             <span class="col-3 col-lg-2 text-left">All Business</span>
-                            <button string="Delete All MRP/Sale/Purchase/Account/MRP/Inventory/Project/Message/Workflow" type="object" name="remove_all_biz"
+                            <button string="Delete All MRP/Sale/Purchase/Account/MRP/Inventory/Project/Message/Workflow"
+                                    type="object" name="remove_all_biz"
                                     confirm="Please confirm to delete the select data?" class="oe_highlight"/>
                         </div>
                     </div>

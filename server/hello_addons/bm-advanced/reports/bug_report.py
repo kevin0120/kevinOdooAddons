@@ -1,5 +1,6 @@
 from odoo import models, fields
 
+
 class BugReport(models.Model):
     _name = 'bug.report'
     _description = 'Bug Report'

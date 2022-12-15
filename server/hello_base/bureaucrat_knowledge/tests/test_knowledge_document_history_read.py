@@ -14,7 +14,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])
+                ['document_body_html'])
 
         self.document_subcat_2.write({
             'visibility_user_ids': [(4, self.demo_user.id)]})
@@ -23,7 +23,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
     def test_document_restricted_access_read_group(self):
@@ -37,7 +37,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])
+                ['document_body_html'])
 
         self.document_subcat_2.write({
             'visibility_group_ids': [(4, self.group_demo.id)]})
@@ -46,7 +46,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
     def test_document_restricted_editors_access_read_user(self):
@@ -58,7 +58,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])
+                ['document_body_html'])
 
         self.document_subcat_2.write({
             'editor_user_ids': [(4, self.demo_user.id)]})
@@ -67,7 +67,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
     def test_document_restricted_editors_access_read_group(self):
@@ -81,7 +81,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])
+                ['document_body_html'])
 
         self.document_subcat_2.write({
             'editor_group_ids': [(4, self.group_demo.id)]})
@@ -90,7 +90,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
     def test_document_restricted_owners_access_read_user(self):
@@ -102,7 +102,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])
+                ['document_body_html'])
 
         self.document_subcat_2.write({
             'owner_user_ids': [(4, self.demo_user.id)]})
@@ -111,7 +111,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
     def test_document_restricted_owners_access_read_group(self):
@@ -125,7 +125,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])
+                ['document_body_html'])
 
         self.document_subcat_2.write({
             'owner_group_ids': [(4, self.group_demo.id)]})
@@ -134,7 +134,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
     def test_document_public_access_portal_internal_read_user(self):
@@ -166,7 +166,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
@@ -182,12 +182,12 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.portal_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
@@ -200,17 +200,17 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.portal_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.public_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
     def test_parent_document_public_portal_internal_access_read_user(self):
@@ -224,7 +224,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])
+                ['document_body_html'])
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
                 self.portal_user).read(['document_body_html'])
@@ -239,7 +239,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
@@ -255,12 +255,12 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.portal_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
@@ -274,17 +274,17 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.portal_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.public_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         # Change visibility time of subcategory level 1 to 'internal'
@@ -294,7 +294,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
@@ -310,12 +310,12 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.portal_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
         with self.assertRaises(exceptions.AccessError):
             self.document_subcat_2.latest_history_id.with_user(
@@ -351,7 +351,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
     def test_document_subcategory_2_restricted_access_read_group(self):
@@ -385,7 +385,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
     def test_document_subcategory_2_restricted_editors_access_read_user(self):
@@ -418,7 +418,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         self.category_top_level.write({
@@ -440,7 +440,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         self.category_subcat_1.write({
@@ -462,7 +462,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         self.category_subcat_2.write({
@@ -504,7 +504,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         self.category_top_level.write({
@@ -526,7 +526,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         self.category_subcat_1.write({
@@ -548,7 +548,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         self.category_subcat_2.write({
@@ -588,7 +588,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         self.category_top_level.write({
@@ -611,7 +611,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         self.category_subcat_1.write({
@@ -634,7 +634,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         self.category_subcat_2.write({
@@ -676,7 +676,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         self.category_top_level.write({
@@ -698,7 +698,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         self.category_subcat_1.write({
@@ -720,7 +720,7 @@ class TestKnowledgeDocumentHistoryRead(TestBureaucratKnowledgeBase):
         self.assertEqual(
             self.document_subcat_2.latest_history_id.with_user(
                 self.demo_user).read(
-                    ['document_body_html'])[0]['document_body_html'],
+                ['document_body_html'])[0]['document_body_html'],
             '<p>Subcategory2 document content</p>')
 
         self.category_subcat_2.write({

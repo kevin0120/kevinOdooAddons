@@ -90,5 +90,5 @@
     </record>
 
     <menuitem action="action_generic_tag_caegories_view" id="menu_action_generic_tag_categories_view"
-                parent="menu_generic_tags_configuration_root" sequence="20"/>
+              parent="menu_generic_tags_configuration_root" sequence="20"/>
 </odoo>

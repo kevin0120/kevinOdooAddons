@@ -5,5 +5,5 @@
         <record id="base.main_company" model="res.company">
             <field name="website">https://www.oneshare.com.cn</field>
         </record>
-	</data>
+    </data>
 </odoo>

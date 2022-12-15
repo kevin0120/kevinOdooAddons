@@ -37,8 +37,8 @@ class IrHttp(models.AbstractModel):
         ]
         return (
             env["ir.attachment"]
-            .sudo()
-            .search_read(domain=domain, fields=["url", "mimetype", "checksum"], limit=1)
+                .sudo()
+                .search_read(domain=domain, fields=["url", "mimetype", "checksum"], limit=1)
         )
 
     def _binary_record_content(self, record, **kw):
@@ -62,12 +62,12 @@ class IrHttp(models.AbstractModel):
 
     @classmethod
     def _binary_ir_attachment_redirect_content(
-        cls, record, default_mimetype="application/octet-stream"
+            cls, record, default_mimetype="application/octet-stream"
     ):
         if (
-            record.type == "binary"
-            and record.url
-            and not re.match(r"^/(\w+)/(.+)$", record.url)
+                record.type == "binary"
+                and record.url
+                and not re.match(r"^/(\w+)/(.+)$", record.url)
         ):
             mimetype = record.mimetype
             content = record.url

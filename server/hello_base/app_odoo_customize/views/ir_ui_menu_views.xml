@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="0">
-<!--        将菜单管理在设置中提前-->
+        <!--        将菜单管理在设置中提前-->
         <record id="base.menu_grant_menu_access" model="ir.ui.menu">
             <field name="parent_id" ref="base.menu_administration"/>
         </record>
@@ -10,7 +10,7 @@
             <field name="model">ir.ui.menu</field>
             <field name="inherit_id" ref="base.edit_menu"/>
             <field name="arch" type="xml">
-                <xpath expr="//tree"  position="attributes">
+                <xpath expr="//tree" position="attributes">
                     <multi_edit eval="True"/>
                 </xpath>
                 <field name="complete_name" position="after">

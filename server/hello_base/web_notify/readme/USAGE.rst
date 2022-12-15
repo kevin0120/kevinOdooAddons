@@ -1,4 +1,3 @@
-
 To send a notification to the user you just need to call one of the new methods defined on res.users:
 
 .. code-block:: python

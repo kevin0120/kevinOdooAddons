@@ -19,9 +19,9 @@
                 <script type="text/javascript" src="https://js.hcaptcha.com/1/api.js"></script>
                 <script>
                     function recaptchaCallback(token) {
-                        var element = document.getElementById('hcaptcha_resp_token');
-                        element.value = token;
-                        document.getElementsByClassName('oe_reset_password_form')[0].submit();
+                    var element = document.getElementById('hcaptcha_resp_token');
+                    element.value = token;
+                    document.getElementsByClassName('oe_reset_password_form')[0].submit();
                     };
                 </script>
                 <br/>
@@ -52,9 +52,9 @@
                 <script type="text/javascript" src="https://js.hcaptcha.com/1/api.js"></script>
                 <script>
                     function recaptchaCallback(token) {
-                        var element = document.getElementById('hcaptcha_resp_token');
-                        element.value = token;
-                        document.getElementsByClassName('oe_signup_form')[0].submit();
+                    var element = document.getElementById('hcaptcha_resp_token');
+                    element.value = token;
+                    document.getElementsByClassName('oe_signup_form')[0].submit();
                     };
                 </script>
                 <input id="hcaptcha_resp_token" type="hidden" name="hcaptcha_resp_token"/>

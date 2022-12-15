@@ -1,14 +1,14 @@
 ##App Odoo Customize(Debranding Title,Language,Documentation,Quick Debug,Quick Data Clear)
 ============
-White label odoo. 
-Support Odoo 13,12, 11, 10, 9. Including communicate and enterprise version.
-You can config odoo, make it look like your own platform.
+White label odoo. Support Odoo 13,12, 11, 10, 9. Including communicate and enterprise version. You can config odoo, make
+it look like your own platform.
+
 1. Deletes Odoo label in footer
 2. Replaces "Odoo" in Windows title
 3. Customize Documentation, Support, About links and title in usermenu
 4. Adds "Developer mode" link to the top right-hand User Menu.
 5. Adds Quick Language Switcher to the top right-hand User Menu.
-6. Adds Country flags  to the top right-hand User Menu.
+6. Adds Country flags to the top right-hand User Menu.
 7. Adds English and Chinese user documentation access to the top right-hand User Menu.
 8. Adds developer documentation access to the top right-hand User Menu.
 9. Customize "My odoo.com account" button
@@ -31,16 +31,15 @@ You can config odoo, make it look like your own platform.
 26. Add multi uninstall modules
 27. Add odoo boost modules link.
 
-This module can help to white label the Odoo.
-Also helpful for training and support for your odoo end-user.
-The user can get the help document just by one click.
+This module can help to white label the Odoo. Also helpful for training and support for your odoo end-user. The user can
+get the help document just by one click.
 
 For more support
 https://www.oneshare.com.cn
 
 ## 在符合odoo开源协议的前提下，去除odoo版权信息，自定义你的odoo
-可完全自行设置下列 odoo 选项，让 odoo 看上去像是你的软件产品
-支持Odoo 13,12, 11, 10, 9 版本，社区版企业版通用
+
+可完全自行设置下列 odoo 选项，让 odoo 看上去像是你的软件产品 支持Odoo 13,12, 11, 10, 9 版本，社区版企业版通用
 
 1. 删除菜单导航页脚的 Odoo 标签
 2. 将弹出窗口中 "Odoo" 设置为自定义名称
@@ -70,23 +69,29 @@ https://www.oneshare.com.cn
 26. 增加批量卸载模块功能
 27. 增加odoo加速功能
 
-使用方法：将解压后的 app_odoo_customize 放到 odoo的 addons目录下，激活开发者模式，应用-->更新应用列表，
-找到 "App odoo Customize"模块，安装即可。
-
+使用方法：将解压后的 app_odoo_customize 放到 odoo的 addons目录下，激活开发者模式，应用-->更新应用列表， 找到 "App odoo Customize"模块，安装即可。
 
 ## 其它技术资源：
+
 # Odoo12在线用户手册（长期更新）
+
 # https://www.oneshare.com.cn/documentation/user/14.0/en/index.html
 
 # Odoo12在线开发者手册（长期更新）
+
 # https://www.oneshare.com.cn/documentation/14.0/index.html
 
 # Odoo10在线中文用户手册（长期更新）
+
 # https://www.oneshare.com.cn/documentation/user/10.0/zh_CN/index.html
 
 # Odoo10离线中文用户手册下载
+
 # https://www.oneshare.com.cn/odoo10_user_manual_document_offline/
+
 # Odoo10离线开发手册下载-含python教程，jquery参考，Jinja2模板，PostgresSQL参考（odoo开发必备）
+
 # https://www.oneshare.com.cn/odoo10_developer_document_offline/
+
 # description:
 

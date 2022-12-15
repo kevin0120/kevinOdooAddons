@@ -41,6 +41,7 @@ class GenericMixinParentNames(models.AbstractModel):
                 raise ValidationError(_(
                     'Error ! You cannot create recursive %s.'
                     '') % self._description)
+
         cls._check_parent_recursion_recursion = _recursion_constraint
 
         return super(GenericMixinParentNames, cls)._build_model(pool, cr)

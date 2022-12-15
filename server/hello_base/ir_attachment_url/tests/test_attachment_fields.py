@@ -52,7 +52,7 @@ class TestAttachmentFields(TransactionCase):
 
         test_record = (
             self.env["ir.ui.menu"]
-            .with_context(ir_attachment_url_fields="ir.ui.menu.web_icon_data")
-            .create({"name": "Turkmenistan (Test Record)", "web_icon_data": TEST_URL})
+                .with_context(ir_attachment_url_fields="ir.ui.menu.web_icon_data")
+                .create({"name": "Turkmenistan (Test Record)", "web_icon_data": TEST_URL})
         )
         self._test_end(test_record)

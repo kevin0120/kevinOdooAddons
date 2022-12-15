@@ -24,12 +24,14 @@ class GenericMixinGuardFields(models.AbstractModel):
     class GuardInteger(int):
         """ Guard class for integer fields.
         """
+
         def unwrap(self):
             return int(self)
 
     class GuardMany2oneReference(int):
         """ Guard class for many2one_reference fields.
         """
+
         def unwrap(self):
             return int(self)
 
@@ -83,9 +85,9 @@ class GenericMixinGuardFields(models.AbstractModel):
                     "Direct modification of '%(model)s:%(field_name)s' "
                     "field is is not allowed!"
                 ) % {
-                    'model': self._name,
-                    'field_name': field_name,
-                })
+                                                     'model': self._name,
+                                                     'field_name': field_name,
+                                                 })
 
         return res
 

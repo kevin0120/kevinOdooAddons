@@ -1,6 +1,7 @@
 from odoo import api, models
 from odoo.exceptions import ValidationError
 
+
 class Bug(models.Model):
     _inherit = 'bm.bug'
 

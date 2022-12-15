@@ -42,6 +42,7 @@ def pre_write(*track_fields, priority=None):
         func._pre_write_fields = track_fields
         func._pre_write_priority = priority
         return func
+
     return decorator
 
 
@@ -73,6 +74,7 @@ def post_write(*track_fields, priority=None):
         func._post_write_fields = track_fields
         func._post_write_priority = priority
         return func
+
     return decorator
 
 
@@ -113,6 +115,7 @@ def pre_create(*track_fields, priority=None):
         func._pre_create_fields = track_fields
         func._pre_create_priority = priority
         return func
+
     return decorator
 
 
@@ -157,6 +160,7 @@ def post_create(*track_fields, priority=None):
         func._post_create_fields = track_fields
         func._post_create_priority = priority
         return func
+
     return decorator
 
 
@@ -214,6 +218,7 @@ class FieldChangeHandler:
         This class is used only during model-creation process,
         to simplify code responsible for analysing methods
     """
+
     def __init__(self, obj, method_name):
         self._obj = obj
         self._method_name = method_name

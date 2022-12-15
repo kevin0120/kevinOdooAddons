@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <menuitem id="menu_generic_tags_root"
-                groups="generic_tag.group_tags_user"
-                sequence="120"
-                name="Tags"
-                web_icon="generic_tag,static/description/menu.png"/>
+              groups="generic_tag.group_tags_user"
+              sequence="120"
+              name="Tags"
+              web_icon="generic_tag,static/description/menu.png"/>
 
     <menuitem id="menu_generic_tags_all"
-                parent="generic_tag.menu_generic_tags_root"
-                sequence="10"
-                name="All Tags"/>
+              parent="generic_tag.menu_generic_tags_root"
+              sequence="10"
+              name="All Tags"/>
 
     <menuitem id="menu_generic_tags_configuration_root"
-                parent="generic_tag.menu_generic_tags_root"
-                sequence="220"
-                name="Configuration"
-                groups="group_tags_manager"/>
+              parent="generic_tag.menu_generic_tags_root"
+              sequence="220"
+              name="Configuration"
+              groups="group_tags_manager"/>
 
     <record id="view_generic_tag_search" model="ir.ui.view">
         <field name="name">generic.tag.search</field>
@@ -29,7 +29,8 @@
 
                 <group expand="0" string="Group By...">
                     <filter string="Model" name="group_by_model" domain="[]" context="{'group_by':'model_id'}"/>
-                    <filter string="Category" name="group_by_category" domain="[]" context="{'group_by':'category_id'}"/>
+                    <filter string="Category" name="group_by_category" domain="[]"
+                            context="{'group_by':'category_id'}"/>
                 </group>
 
             </search>
@@ -44,7 +45,7 @@
                 <field name="sequence" widget="handle"/>
                 <field name="model_id" widget="selection" invisible="'hide_model' in context"/>
                 <field name="category_id" domain="[('model_id','=',model_id)]"
-                        context="{'default_model_id': model_id}" attrs="{'readonly': [('model_id','=',False)]}"/>
+                       context="{'default_model_id': model_id}" attrs="{'readonly': [('model_id','=',False)]}"/>
                 <field name="name"/>
                 <field name="code"/>
                 <field name="comment"/>
@@ -87,7 +88,8 @@
                         <group>
                             <field name="model_id" widget="selection" invisible="'hide_model' in context"/>
                             <field name="category_id" domain="[('model_id','=',model_id)]"
-                                   context="{'default_model_id': model_id}" attrs="{'readonly': [('model_id','=',False)]}"/>
+                                   context="{'default_model_id': model_id}"
+                                   attrs="{'readonly': [('model_id','=',False)]}"/>
                             <field name="group_ids" widget="many2many_tags"
                                    groups="generic_tag.group_tags_manager"/>
                         </group>
@@ -107,5 +109,5 @@
     </record>
 
     <menuitem action="action_generic_tags_view" id="menu_action_generic_tags_view"
-                parent="menu_generic_tags_all" sequence="10"/>
+              parent="menu_generic_tags_all" sequence="10"/>
 </odoo>

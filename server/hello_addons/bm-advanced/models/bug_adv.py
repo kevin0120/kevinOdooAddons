@@ -2,17 +2,18 @@
 
 from odoo import models, fields, api
 
+
 class BugAdvanced(models.Model):
-    _inherit='bm.bug'
-    #进阶模型当中新增一个所需时间字段
-    need_time=fields.Integer('所需时间(小时)')
-    #给bm.bug类的name字段增加help属性
-    name=fields.Char(help='简要描述发现的bug')
-    stage_id=fields.Many2one('bm.bug.stage','阶段')
-    tag_ids=fields.Many2many('bm.bug.tag',string='标示')
+    _inherit = 'bm.bug'
+    # 进阶模型当中新增一个所需时间字段
+    need_time = fields.Integer('所需时间(小时)')
+    # 给bm.bug类的name字段增加help属性
+    name = fields.Char(help='简要描述发现的bug')
+    stage_id = fields.Many2one('bm.bug.stage', '阶段')
+    tag_ids = fields.Many2many('bm.bug.tag', string='标示')
     deadline = fields.Date('最晚解决日期')
     progress = fields.Integer('进度')
-    state=fields.Selection([('draft','草稿'),('submit','提交')])
+    state = fields.Selection([('draft', '草稿'), ('submit', '提交')])
     priority = fields.Selection(
         [('0', '低'),
          ('1', '中'),
@@ -40,12 +41,13 @@ class BugAdvanced(models.Model):
 
     user_bug_count = fields.Integer(
         '待处理bug总数',
-    compute='_compute_user_bug_count')
+        compute='_compute_user_bug_count')
 
     def _compute_user_bug_count(self):
         for task in self:
             task.user_bug_count = task.search_count(
                 [('user_id', '=', task.user_id.id)])
+
 
 '''
     @api.model

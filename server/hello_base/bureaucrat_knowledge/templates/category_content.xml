@@ -2,7 +2,7 @@
 <odoo>
     <template id="knowledge_category_content_template"
               name="Template for Contents of Bureaucrat Knowlege Category">
-            <ul class="list-group">
+        <ul class="list-group">
             <t t-foreach="category.child_ids" t-as="subcategory">
                 <li class="list-group-item">
                     <a t-attf-href="/web#id={{subcategory.id}}&amp;view_type=form&amp;model=bureaucrat.knowledge.category&amp;action={{env.ref('bureaucrat_knowledge.action_bureaucrat_knowledge_category').id}}">
@@ -11,8 +11,8 @@
                     </a>
                 </li>
             </t>
-            </ul>
-            <ul class="list-group">
+        </ul>
+        <ul class="list-group">
             <t t-foreach="category.document_ids" t-as="document">
                 <li class="list-group-item">
                     <a t-attf-href="/web#id={{document.id}}&amp;view_type=form&amp;model=bureaucrat.knowledge.document&amp;action={{env.ref('bureaucrat_knowledge.action_bureaucrat_knowledge_document').id}}">
@@ -21,6 +21,6 @@
                     </a>
                 </li>
             </t>
-            </ul>
+        </ul>
     </template>
 </odoo>

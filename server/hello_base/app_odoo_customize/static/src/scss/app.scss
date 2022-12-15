@@ -1,13 +1,13 @@
-.o_user_menu  .dropdown-menu img,
-.o_user_menu_mobile  .dropdown-item  img {
-    height: 20px;
-    margin: 2px;
+.o_user_menu .dropdown-menu img,
+.o_user_menu_mobile .dropdown-item img {
+  height: 20px;
+  margin: 2px;
 }
 
-.oe_form_configuration  {
+.oe_form_configuration {
   .o_settings_container {
-    span  {
-      display:inline-block;
+    span {
+      display: inline-block;
     }
   }
 }
@@ -17,6 +17,7 @@
     content: '/';
   }
 }
+
 // Colors replace to ent
 //$o-community-color: #875A7B;
 

@@ -36,7 +36,7 @@ odoo.define('code_backend_theme.SideBar', function (require) {
             var $target = $(ev.currentTarget);
             var actionID = $target.data('action-id');
             var menuID = $target.data('menu-id');
-            var app = _.findWhere(this._apps, { actionID: actionID, menuID: menuID });
+            var app = _.findWhere(this._apps, {actionID: actionID, menuID: menuID});
             this._openApp(app);
         },
     });

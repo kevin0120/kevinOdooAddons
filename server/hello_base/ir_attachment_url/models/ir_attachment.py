@@ -14,7 +14,6 @@ _logger = logging.getLogger(__name__)
 
 
 class IrAttachment(models.Model):
-
     _inherit = "ir.attachment"
 
     @api.depends("store_fname", "db_datas")
@@ -29,8 +28,8 @@ class IrAttachment(models.Model):
     def _filter_protected_attachments(self):
         return self.filtered(
             lambda r: r.res_model not in ["ir.ui.view", "ir.ui.menu"]
-            and not r.name.startswith("/web/content/")
-            and not r.name.startswith("/web/static/")
+                      and not r.name.startswith("/web/content/")
+                      and not r.name.startswith("/web/static/")
         )
 
     @api.model_create_multi
@@ -41,12 +40,12 @@ class IrAttachment(models.Model):
         self._set_where_to_store(vals_list)
         for values in vals_list:
             if (
-                url_fields
-                and values.get("type") != "url"
-                and not values.get("url")
-                and values.get("res_model")
-                and values.get("res_field")
-                and values.get("datas")
+                    url_fields
+                    and values.get("type") != "url"
+                    and not values.get("url")
+                    and values.get("res_model")
+                    and values.get("res_field")
+                    and values.get("datas")
             ):
                 full_field_name = values["res_model"] + "." + values["res_field"]
                 if full_field_name in url_fields:
@@ -55,9 +54,9 @@ class IrAttachment(models.Model):
                     del values["datas"]
             bucket = values.pop("_bucket", None)
             if (
-                bucket
-                and values.get("datas")
-                and values.get("res_model") not in ["ir.ui.view", "ir.ui.menu"]
+                    bucket
+                    and values.get("datas")
+                    and values.get("res_model") not in ["ir.ui.view", "ir.ui.menu"]
             ):
                 values = self._check_contents(values)
                 data = values.pop("datas")
@@ -71,7 +70,7 @@ class IrAttachment(models.Model):
         return super(IrAttachment, self).create(vals_list)
 
     def _get_datas_related_values_with_bucket(
-        self, bucket, data, filename, mimetype, checksum=None
+            self, bucket, data, filename, mimetype, checksum=None
     ):
         bin_data = base64.b64decode(data) if data else b""
         if not checksum:

@@ -4,7 +4,6 @@ from odoo.tools.misc import mute_logger
 from odoo.tools import config as tools_config
 from odoo.tests import common as tests_common
 
-
 # For compatability with 14.0
 PORT = tools_config['http_port']
 HOST = tests_common.HOST
@@ -34,6 +33,7 @@ class hide_log_messages:
                 pass
 
     """
+
     def __init__(self, logger, fn_check):
         self.logger = logger
         self.fn_check = fn_check
@@ -54,6 +54,7 @@ class hide_log_messages:
         def wrapper(*args, **kwargs):
             with self:
                 return func(*args, **kwargs)
+
         return wrapper
 
 

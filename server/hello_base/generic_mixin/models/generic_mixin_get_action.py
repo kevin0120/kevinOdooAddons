@@ -27,6 +27,7 @@ class GenericMixinGetAction(models.AbstractModel):
     """
     _name = 'generic.mixin.get.action'
     _description = "Generic Mixin: Get Action"
+
     # Note: this mixin is developed primaraly for compatability with 14.0
 
     @api.model

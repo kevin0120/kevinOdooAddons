@@ -23,7 +23,8 @@ class ResConfigSettings(models.TransientModel):
     app_show_enterprise = fields.Boolean('Show Enterprise Tag', help="Uncheck to hide the Enterprise tag")
     app_show_share = fields.Boolean('Show Share Dashboard', help="Uncheck to hide the Odoo Share Dashboard")
     app_show_poweredby = fields.Boolean('Show Powered by Odoo', help="Uncheck to hide the Powered by text")
-    group_show_author_in_apps = fields.Boolean(string="Show Author in Apps Dashboard", implied_group='app_odoo_customize.group_show_author_in_apps',
+    group_show_author_in_apps = fields.Boolean(string="Show Author in Apps Dashboard",
+                                               implied_group='app_odoo_customize.group_show_author_in_apps',
                                                help="Uncheck to Hide Author and Website in Apps Dashboard")
     module_odoo_referral = fields.Boolean('Show Odoo Referral', help="Uncheck to remove the Odoo Referral")
 
@@ -111,7 +112,8 @@ class ResConfigSettings(models.TransientModel):
         ir_config.set_param("app_ribbon_name", self.app_ribbon_name or "*oneshare.com.cn")
 
     def set_module_url(self):
-        sql = "UPDATE ir_module_module SET website = '%s' WHERE license like '%s' and website <> ''" % (self.app_enterprise_url, 'OEEL%')
+        sql = "UPDATE ir_module_module SET website = '%s' WHERE license like '%s' and website <> ''" % (
+        self.app_enterprise_url, 'OEEL%')
         try:
             self._cr.execute(sql)
             self._cr.commit()

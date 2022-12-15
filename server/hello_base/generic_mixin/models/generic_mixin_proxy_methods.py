@@ -7,9 +7,11 @@ def generate_proxy_decorator(attr_name):
         Used to decorate methods that have to be proxied to model,
         that inherits from source model via delegation (delegate=True).
     """
+
     def proxy(fn):
         setattr(fn, attr_name, True)
         return fn
+
     return proxy
 
 

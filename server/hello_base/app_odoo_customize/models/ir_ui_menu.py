@@ -23,4 +23,3 @@ class IrUiMenu(models.Model):
         else:
             name = self.name
         return name
-

@@ -5,6 +5,7 @@ from odoo.tests.common import TransactionCase
 from odoo import fields
 from odoo.exceptions import Warning
 
+
 class TestWizard(TransactionCase):
     def setUp(self, *args, **kwargs):
         super(TestWizard, self).setUp(*args, **kwargs)
@@ -31,6 +32,7 @@ class TestWizard(TransactionCase):
         self.wizard = Wizard \
             .with_context(active_ids=None) \
             .create({})
+
     def test_populate_tasks(self):
         """Populate bugs button should add two bugs"""
         self.wizard.do_populate_tasks()

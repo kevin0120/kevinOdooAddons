@@ -17,8 +17,12 @@
                         </tree>
                     </field>
                     <group>
-                        <group><field name="wizard_user_id"/></group>
-                        <group><field name="new_is_closed"/></group>
+                        <group>
+                            <field name="wizard_user_id"/>
+                        </group>
+                        <group>
+                            <field name="new_is_closed"/>
+                        </group>
                     </group>
                     <footer>
                         <button type="object" name="update_batch" string="批量更新" class="oe_highlight"

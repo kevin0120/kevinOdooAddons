@@ -13,8 +13,8 @@ def prepare_jinja_template_env(env_kwargs=None, extra_context=None):
     """ Prepare custom jinja2 template environment.
     """
     env_params = {
-        'trim_blocks': True,               # do not output newline after blocks
-        'autoescape': True,                # XML/HTML automatic escaping
+        'trim_blocks': True,  # do not output newline after blocks
+        'autoescape': True,  # XML/HTML automatic escaping
     }
     if env_kwargs:
         env_params.update(env_kwargs)

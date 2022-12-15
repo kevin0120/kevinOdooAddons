@@ -360,9 +360,9 @@ class BureaucratKnowledgeCategory(models.Model):
                  ('active', '!=', rec.active)]).write({'active': rec.active})
             self.env['bureaucrat.knowledge.document'].with_context(
                 active_test=False).search(
-                    [('category_id', 'child_of', rec.id),
-                     ('active', '!=', rec.active)]).write(
-                         {'active': rec.active})
+                [('category_id', 'child_of', rec.id),
+                 ('active', '!=', rec.active)]).write(
+                {'active': rec.active})
 
     def name_get(self):
         return [(rec.id, rec.name) for rec in self]
@@ -377,5 +377,6 @@ class BureaucratKnowledgeCategory(models.Model):
                     res.append(rec[name_field])
                 rec = rec[self._parent_name]
             return res
+
         for rec in self:
             rec.full_name = " / ".join(reversed(get_names(rec.sudo())))

@@ -22,7 +22,7 @@ def pre_init_hook(cr):
     try:
         # 更新企业版指向
         sql = "UPDATE ir_module_module SET website = '%s' WHERE license like '%s' and website <> ''" % (
-        'https://www.oneshare.com.cn', 'OEEL%')
+            'https://www.oneshare.com.cn', 'OEEL%')
         cr.execute(sql)
         cr.commit()
     except Exception as e:

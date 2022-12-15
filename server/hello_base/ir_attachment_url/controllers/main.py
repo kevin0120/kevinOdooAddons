@@ -13,23 +13,23 @@ from odoo.addons.web.controllers.main import Binary
 
 class BinaryExtended(Binary):
     def _content_image(
-        self,
-        xmlid=None,
-        model="ir.attachment",
-        id=None,  # pylint: disable=redefined-builtin
-        field="datas",
-        filename_field="name",
-        unique=None,
-        filename=None,
-        mimetype=None,
-        download=None,
-        width=0,
-        height=0,
-        crop=False,
-        quality=0,
-        access_token=None,
-        placeholder="placeholder.png",
-        **kwargs
+            self,
+            xmlid=None,
+            model="ir.attachment",
+            id=None,  # pylint: disable=redefined-builtin
+            field="datas",
+            filename_field="name",
+            unique=None,
+            filename=None,
+            mimetype=None,
+            download=None,
+            width=0,
+            height=0,
+            crop=False,
+            quality=0,
+            access_token=None,
+            placeholder="placeholder.png",
+            **kwargs
     ):
         status, headers, image_base64 = request.env["ir.http"].binary_content(
             xmlid=xmlid,
@@ -46,7 +46,7 @@ class BinaryExtended(Binary):
         )
 
         if status in [301, 302, 304] or (
-            status != 200 and download
+                status != 200 and download
         ):  # em230418: added 302 only
             return request.env["ir.http"]._response_by_status(
                 status, headers, image_base64

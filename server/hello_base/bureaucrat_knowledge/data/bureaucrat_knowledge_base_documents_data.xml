@@ -721,7 +721,9 @@
 
     <record id="how_to_configure_sla_to_work_for_clients_with_different_services_and_service_levels_in_contracts"
             model="bureaucrat.knowledge.document">
-        <field name="name">How to Configure SLA to Work for Clients with Different Services and Service Levels in Contracts</field>
+        <field name="name">How to Configure SLA to Work for Clients with Different Services and Service Levels in
+            Contracts
+        </field>
         <field name="document_type">html</field>
         <field name="category_id"
                ref="bureaucrat_documentation_admin_guides"/>
@@ -1068,7 +1070,9 @@
 
     <record id="setting_up_a_request_only_assigned_person_or_system_administrator_can_move_requests_by_the_route"
             model="bureaucrat.knowledge.document">
-        <field name="name">Setting Up a Request. Only Assigned Person or System Administrator Can Move Requests by the Route</field>
+        <field name="name">Setting Up a Request. Only Assigned Person or System Administrator Can Move Requests by the
+            Route
+        </field>
         <field name="document_type">html</field>
         <field name="category_id"
                ref="bureaucrat_documentation_admin_guides"/>

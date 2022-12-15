@@ -4,18 +4,21 @@
         <field name="flow">id_token_code</field>
         <field name="client_id">demo-client</field>
         <field name="body">Login with Keycloak</field>
-        <field name="enabled" eval="True" />
+        <field name="enabled" eval="True"/>
         <field name="scope">openid email</field>
         <field name="token_map">sub:user_id</field>
         <field name="logout_endpoint">http://10.1.1.60:8080/auth/realms/demo/protocol/openid-connect/logout</field>
         <field
-            name="auth_endpoint"
-        >http://10.1.1.60:8080/auth/realms/demo/protocol/openid-connect/auth</field>
+                name="auth_endpoint"
+        >http://10.1.1.60:8080/auth/realms/demo/protocol/openid-connect/auth
+        </field>
         <field
-            name="token_endpoint"
-        >http://10.1.1.60:8080/auth/realms/demo/protocol/openid-connect/token</field>
+                name="token_endpoint"
+        >http://10.1.1.60:8080/auth/realms/demo/protocol/openid-connect/token
+        </field>
         <field
-            name="jwks_uri"
-        >http://10.1.1.60:8080/auth/realms/demo/protocol/openid-connect/certs</field>
+                name="jwks_uri"
+        >http://10.1.1.60:8080/auth/realms/demo/protocol/openid-connect/certs
+        </field>
     </record>
 </odoo>

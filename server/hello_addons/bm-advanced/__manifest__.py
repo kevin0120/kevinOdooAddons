@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['bug-manage','mail'],
+    'depends': ['bug-manage', 'mail'],
 
     # always loaded
     'data': [

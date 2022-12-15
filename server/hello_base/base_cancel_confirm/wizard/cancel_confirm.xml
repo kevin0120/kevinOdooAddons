@@ -7,23 +7,23 @@
             <form string="Cancel Confirmation">
                 <h3>Are you sure to cancel this document?</h3>
                 <group>
-                    <field name="has_cancel_reason" invisible="1" />
+                    <field name="has_cancel_reason" invisible="1"/>
                     <field
-                        name="cancel_reason"
-                        attrs="{'invisible': [('has_cancel_reason', '=', 'no')],
+                            name="cancel_reason"
+                            attrs="{'invisible': [('has_cancel_reason', '=', 'no')],
                                                         'required': [('has_cancel_reason', '=', 'required')]}"
                     />
                 </group>
                 <footer>
-                <button
-                        name="confirm_cancel"
-                        string="Confirm"
-                        type="object"
-                        class="oe_highlight"
+                    <button
+                            name="confirm_cancel"
+                            string="Confirm"
+                            type="object"
+                            class="oe_highlight"
                     />
-                or
-                <button string="Cancel" class="oe_link" special="cancel" />
-            </footer>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
             </form>
         </field>
     </record>
@@ -32,7 +32,7 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">cancel.confirm</field>
         <field name="view_mode">form</field>
-        <field name="view_id" ref="view_cancel_confirm_wizard" />
+        <field name="view_id" ref="view_cancel_confirm_wizard"/>
         <field name="target">new</field>
     </record>
 </odoo>

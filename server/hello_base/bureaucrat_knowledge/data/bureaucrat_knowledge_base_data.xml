@@ -6,7 +6,7 @@
         <field name="name">Bureaucrat Documentation</field>
     </record>
 
-    
+
     <record id="bureaucrat_documentation_admin_guides"
             model="bureaucrat.knowledge.category">
         <field name="name">Admin Guides</field>

@@ -35,7 +35,7 @@
                     view_mode="tree,form,kanban"
                     src_model="bm.bug.stage"
                     multi="True"
-                    target="current" />
+                    target="current"/>
 
 
         <!-- actions -->

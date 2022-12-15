@@ -7,26 +7,26 @@
         <field name="sequence">120</field>
     </record>
 
-<!--    <record id="oneshare_cap_core.group_cap_user" model="res.groups">-->
-<!--        <field name="name">User</field>-->
-<!--        <field name="category_id" ref="module_category_cap"/>-->
-<!--        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>-->
-<!--        <field name="comment">The CAP user user the analysis platform </field>-->
-<!--    </record>-->
+    <!--    <record id="oneshare_cap_core.group_cap_user" model="res.groups">-->
+    <!--        <field name="name">User</field>-->
+    <!--        <field name="category_id" ref="module_category_cap"/>-->
+    <!--        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>-->
+    <!--        <field name="comment">The CAP user user the analysis platform </field>-->
+    <!--    </record>-->
 
-<!--    <record id="oneshare_cap_core.group_cap_manager" model="res.groups">-->
-<!--        <field name="name">Administrator</field>-->
-<!--        <field name="category_id" ref="module_category_cap"/>-->
-<!--        <field name="implied_ids" eval="[(4, ref('oneshare_cap_core.group_cap_user'))]"/>-->
-<!--        <field name="comment">The CAP manager manages the analysis platform </field>-->
-<!--    </record>-->
+    <!--    <record id="oneshare_cap_core.group_cap_manager" model="res.groups">-->
+    <!--        <field name="name">Administrator</field>-->
+    <!--        <field name="category_id" ref="module_category_cap"/>-->
+    <!--        <field name="implied_ids" eval="[(4, ref('oneshare_cap_core.group_cap_user'))]"/>-->
+    <!--        <field name="comment">The CAP manager manages the analysis platform </field>-->
+    <!--    </record>-->
 
-<!--    <record model="res.users" id="base.user_root">-->
-<!--        <field eval="[(4,ref('oneshare_cap_core.group_cap_manager'))]" name="groups_id"/>-->
-<!--    </record>-->
+    <!--    <record model="res.users" id="base.user_root">-->
+    <!--        <field eval="[(4,ref('oneshare_cap_core.group_cap_manager'))]" name="groups_id"/>-->
+    <!--    </record>-->
 
-<!--    <record model="res.users" id="base.user_admin">-->
-<!--        <field eval="[(4,ref('oneshare_cap_core.group_cap_manager'))]" name="groups_id"/>-->
-<!--    </record>-->
+    <!--    <record model="res.users" id="base.user_admin">-->
+    <!--        <field eval="[(4,ref('oneshare_cap_core.group_cap_manager'))]" name="groups_id"/>-->
+    <!--    </record>-->
 
 </odoo>

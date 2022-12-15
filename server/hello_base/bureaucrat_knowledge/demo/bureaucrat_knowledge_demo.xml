@@ -8,7 +8,7 @@
         <field name="name">Top level category 1</field>
     </record>
 
-    
+
     <record id="bureaucrat_demo_subcategory_1"
             model="bureaucrat.knowledge.category">
         <field name="name">Subcategory 1</field>

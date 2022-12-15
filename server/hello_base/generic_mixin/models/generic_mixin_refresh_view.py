@@ -18,6 +18,7 @@ def with_delay_refresh(fn):
             def action_do_some_long_running_action(self):
                 pass
     """
+
     @functools.wraps(fn)
     def wrapped(self, *args, **kwargs):
         with RefreshViewContext(self.env):
@@ -35,6 +36,7 @@ class RefreshViewContext:
         :param api.Environment env: the environment to use to send
              notifications
     """
+
     def __init__(self, env):
         self.env = env
         self.nested = None

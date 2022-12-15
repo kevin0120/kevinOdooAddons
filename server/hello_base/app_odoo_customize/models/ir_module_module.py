@@ -4,6 +4,7 @@ from odoo import api, fields, models, modules, tools, _
 
 import operator
 
+
 class IrModule(models.Model):
     _inherit = 'ir.module.module'
 
@@ -14,7 +15,8 @@ class IrModule(models.Model):
     # installed_version = fields.Char('Latest Version', compute='_get_latest_version')
     # latest_version = fields.Char('Installed Version', readonly=True)
 
-    local_updatable = fields.Boolean('Local updatable', compute='_get_latest_version', compute_sudo=False, default=False, store=True)
+    local_updatable = fields.Boolean('Local updatable', compute='_get_latest_version', compute_sudo=False,
+                                     default=False, store=True)
 
     def module_multi_uninstall(self):
         """ Perform the various steps required to uninstall a module completely
@@ -42,8 +44,8 @@ class IrModule(models.Model):
         self.ensure_one()
         action = self.env.ref('app_odoo_customize.action_server_module_multi_get_po').read()[0]
         action['context'].update({
-                'default_lang': self.env.user.lang,
-            })
+            'default_lang': self.env.user.lang,
+        })
         return action
 
     @api.depends('name', 'latest_version', 'state')
@@ -51,8 +53,8 @@ class IrModule(models.Model):
         default_version = modules.adapt_version('1.0')
         for module in self:
             module.installed_version = self.get_module_info(module.name).get('version', default_version)
-            if module.installed_version and module.latest_version and operator.gt(module.installed_version, module.latest_version):
+            if module.installed_version and module.latest_version and operator.gt(module.installed_version,
+                                                                                  module.latest_version):
                 module.local_updatable = True
             else:
                 module.local_updatable = False
-

@@ -10,28 +10,28 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="name" />
-                        <field name="group_id" required="0" readonly="1" />
+                        <field name="name"/>
+                        <field name="group_id" required="0" readonly="1"/>
                     </group>
                     <notebook>
                         <page string="Groups">
-                            <field name="implied_ids" nolabel="1" />
+                            <field name="implied_ids" nolabel="1"/>
                         </page>
                         <page string="Users">
                             <field name="line_ids" nolabel="1">
                                 <tree
-                                    editable="bottom"
-                                    decoration-muted="not is_enabled"
+                                        editable="bottom"
+                                        decoration-muted="not is_enabled"
                                 >
-                                    <field name="user_id" />
-                                    <field name="date_from" />
-                                    <field name="date_to" />
-                                    <field name="is_enabled" />
+                                    <field name="user_id"/>
+                                    <field name="date_from"/>
+                                    <field name="date_to"/>
+                                    <field name="is_enabled"/>
                                 </tree>
                             </field>
                         </page>
                         <page name="page_internal_notes" string="Internal Notes">
-                            <field name="comment" />
+                            <field name="comment"/>
                         </page>
                     </notebook>
                 </sheet>
@@ -43,8 +43,8 @@
         <field name="model">res.users.role</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name" />
-                <field name="user_ids" />
+                <field name="name"/>
+                <field name="user_ids"/>
             </tree>
         </field>
     </record>
@@ -53,9 +53,9 @@
         <field name="model">res.users.role</field>
         <field name="arch" type="xml">
             <search string="Roles">
-                <field name="name" />
-                <field name="user_ids" />
-                <field name="implied_ids" />
+                <field name="name"/>
+                <field name="user_ids"/>
+                <field name="implied_ids"/>
             </search>
         </field>
     </record>
@@ -63,11 +63,11 @@
         <field name="name">Roles</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">res.users.role</field>
-        <field name="view_id" ref="view_res_users_role_tree" />
+        <field name="view_id" ref="view_res_users_role_tree"/>
     </record>
     <menuitem
-        id="menu_action_res_users_role_tree"
-        parent="base.menu_users"
-        action="action_res_users_role_tree"
+            id="menu_action_res_users_role_tree"
+            parent="base.menu_users"
+            action="action_res_users_role_tree"
     />
 </odoo>

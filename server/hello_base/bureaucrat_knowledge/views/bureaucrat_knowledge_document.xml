@@ -50,13 +50,13 @@
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button class="oe_stat_button"
-                            name="action_view_history"
-                            type="object"
-                            attrs="{'invisible': [('history_count', '&lt;=', 1)]}"
-                            icon="fa-history">
-                                <field name="history_count"
-                                       string="Versions"
-                                       widget="statinfo"/>
+                                name="action_view_history"
+                                type="object"
+                                attrs="{'invisible': [('history_count', '&lt;=', 1)]}"
+                                icon="fa-history">
+                            <field name="history_count"
+                                   string="Versions"
+                                   widget="statinfo"/>
                         </button>
                     </div>
                     <field name="active" invisible="1"/>
@@ -80,10 +80,10 @@
                     <notebook>
                         <page name="document_document" string="Document">
                             <field name="document_body_html"
-                                attrs="{'invisible': [('document_type', '!=', 'html')]}"/>
+                                   attrs="{'invisible': [('document_type', '!=', 'html')]}"/>
                             <field name="document_body_pdf"
-                                attrs="{'invisible': [('document_type', '!=', 'pdf')]}"
-                                widget="pdf_viewer"/>
+                                   attrs="{'invisible': [('document_type', '!=', 'pdf')]}"
+                                   widget="pdf_viewer"/>
                             <field name="commit_summary" class="oe_edit_only" placeholder="Commit summary ..."/>
                         </page>
                         <page name="document_settings" string="Settings">
@@ -206,8 +206,14 @@
                                     <span class="fa fa-bars fa-lg" title="Settings"/>
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                    <t t-if="widget.editable"><li><a type="edit">Edit Document</a></li></t>
-                                    <li><ul class="oe_kanban_colorpicker" data-field="color"/></li>
+                                    <t t-if="widget.editable">
+                                        <li>
+                                            <a type="edit">Edit Document</a>
+                                        </li>
+                                    </t>
+                                    <li>
+                                        <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="o_kanban_record_title font-weight-bold border-bottom border-primary text-primary mt-1"

@@ -6,7 +6,7 @@
     <record model="ir.module.category" id="base.module_category_generic_tags">
         <field name="name">Generic Tags</field>
         <field name="sequence">100</field>
-        <field name="visible" eval="1" />
+        <field name="visible" eval="1"/>
     </record>
 
     <!--
@@ -40,7 +40,9 @@
     <record id="rule_generic_tags_user" model="ir.rule">
         <field name="name">Global: see tags w/o group or if user in same group</field>
         <field name="model_id" ref="generic_tag.model_generic_tag"/>
-        <field name="domain_force">['|', '|', ('group_ids','=',False),('group_ids.users.id','=',user.id), (int(user.has_group('generic_tag.group_tags_manager')), '=', 1)]</field>
+        <field name="domain_force">['|', '|', ('group_ids','=',False),('group_ids.users.id','=',user.id),
+            (int(user.has_group('generic_tag.group_tags_manager')), '=', 1)]
+        </field>
     </record>
     <record id="rule_generic_tags_user_restricted" model="ir.rule">
         <field name="name">Restricted tag user</field>

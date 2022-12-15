@@ -53,11 +53,11 @@ class ResUsers(models.Model):
         self._notify_channel(DEFAULT, message, title, sticky)
 
     def _notify_channel(
-        self, type_message=DEFAULT, message=DEFAULT_MESSAGE, title=None, sticky=False
+            self, type_message=DEFAULT, message=DEFAULT_MESSAGE, title=None, sticky=False
     ):
         # pylint: disable=protected-access
         if not self.env.user._is_admin() and any(
-            user.id != self.env.uid for user in self
+                user.id != self.env.uid for user in self
         ):
             raise exceptions.UserError(
                 _("Sending a notification to another user is forbidden.")
