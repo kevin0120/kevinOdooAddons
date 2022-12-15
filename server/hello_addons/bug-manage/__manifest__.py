@@ -25,11 +25,11 @@
     'data': [
         'security/onesphere_cap_rules.xml',
         'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'template/templates.xml',
         'views/bugs.xml',
         'views/follower.xml',
-        'views/bugs_template.xml',
+        'views/bugmanage.xml',
+        'template/bugs_template.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

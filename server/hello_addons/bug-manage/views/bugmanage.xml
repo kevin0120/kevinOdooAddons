@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="bug-manage.bug_manage_tree">
+            <field name="name">bug-manage.bug_manage_tree</field>
+            <field name="model">bug.manage</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="value"/>
+                    <field name="value2"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="bug-manage.bug_manage_form">
+            <field name="name">bug-manage.bug_manage_form</field>
+            <field name="model">bug.manage</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="name"/>
+                    <field name="value"/>
+                    <field name="value2"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="bug-manage.bug_manage_search">
+            <field name="name">bug manage搜索</field>
+            <field name="model">bug.manage</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="bug-manage.action_window_action">
+            <field name="name">bug-manage window12</field>
+            <field name="res_model">bug.manage</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Menu 1" id="bug-manage.menu_3" parent="bug-manage.menu_root"/>
+        <menuitem name="List" id="bug-manage.menu_3_list" parent="bug-manage.menu_3"
+                  action="bug-manage.action_window_action"/>
+
+    </data>
+</odoo>

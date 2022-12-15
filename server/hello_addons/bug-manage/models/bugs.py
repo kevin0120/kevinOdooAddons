@@ -18,3 +18,17 @@ class Bug(models.Model):
         for item in self:
             item.is_closed = True
         return True
+
+
+class bug_manage(models.Model):
+    _name = 'bug.manage'
+
+    name = fields.Char(string="名称")
+    value = fields.Integer(string="程度")
+    value2 = fields.Float(string="百分比", compute="_value_pc", store=True)
+    description = fields.Text(string="描述")
+
+    @api.depends('value')
+    def _value_pc(self):
+        for record in self:
+            record.value2 = float(record.value) / 100
