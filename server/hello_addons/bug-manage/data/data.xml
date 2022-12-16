@@ -1,0 +1,80 @@
+<odoo>
+    <data>
+        <!--        <record id="oneshare_work_area_category_1" model="oneshare.mrp.work.area.category">-->
+        <!--            <field name="name">车间</field>-->
+        <!--            <field name="color" eval="1"/>-->
+        <!--        </record>-->
+        <!--        <record id="oneshare_work_area_category_2" model="oneshare.mrp.work.area.category">-->
+        <!--            <field name="name">生产线</field>-->
+        <!--            <field name="color" eval="2"/>-->
+        <!--        </record>-->
+        <!--        <record id="oneshare_work_area_category_3" model="oneshare.mrp.work.area.category">-->
+        <!--            <field name="name">工段</field>-->
+        <!--            <field name="color" eval="3"/>-->
+        <!--        </record>-->
+        <!--        <record id="oneshare_work_area_category_4" model="oneshare.mrp.work.area.category">-->
+        <!--            <field name="name">工位</field>-->
+        <!--            <field name="color" eval="4"/>-->
+        <!--        </record>-->
+        <!--        <record id="oneshare_work_area_category_5" model="oneshare.mrp.work.area.category">-->
+        <!--            <field name="name">工位拾取区域</field>-->
+        <!--            <field name="color" eval="5"/>-->
+        <!--        </record>-->
+
+        <record id="app_odoo_customize.app_ribbon_background_color" model="ir.config_parameter">
+            <field name="key">app_ribbon_background_color</field>
+            <field name="value">rgba(0,255,0,.4)</field>
+        </record>
+        <record id="object0" model="bug.manage">
+            <field name="name">会议1</field>
+            <field name="value">0</field>
+        </record>
+
+        <record id="object1" model="bug.manage">
+            <field name="name">会议2</field>
+            <field name="value">10</field>
+        </record>
+
+        <record id="object2" model="bug.manage">
+            <field name="name">会议3</field>
+            <field name="value">20</field>
+        </record>
+
+        <record id="object3" model="bug.manage">
+            <field name="name">会议4</field>
+            <field name="value">30</field>
+        </record>
+
+        <record id="object4" model="bug.manage">
+            <field name="name">会议5</field>
+            <field name="value">40</field>
+        </record>
+
+
+        <record id="bug1" model="bm.bug">
+            <field name="name">bug1</field>
+            <field name="meeting_id" ref="object0"/>
+        </record>
+
+        <record id="bug2" model="bm.bug">
+            <field name="name">bug2</field>
+            <field name="meeting_id" ref="object0"/>
+        </record>
+
+        <record id="bug3" model="bm.bug">
+            <field name="name">bug3</field>
+            <field name="meeting_id" ref="object0"/>
+        </record>
+
+        <record id="bug4" model="bm.bug">
+            <field name="name">bug4</field>
+            <field name="meeting_id" ref="object1"/>
+        </record>
+
+        <record id="bug5" model="bm.bug">
+            <field name="name">bug5</field>
+            <field name="meeting_id" ref="object1"/>
+        </record>
+
+    </data>
+</odoo>

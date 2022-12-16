@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'base_setup'],
+    'depends': ['base', 'base_setup', 'web_notify', 'app_odoo_customize'],
 
     # always loaded
     'data': [
@@ -30,6 +30,7 @@
         'views/follower.xml',
         'views/bugmanage.xml',
         'template/bugs_template.xml',
+        'data/data.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
