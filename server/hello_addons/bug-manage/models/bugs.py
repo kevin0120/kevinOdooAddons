@@ -40,6 +40,21 @@ class Bug(models.Model):
             if not lead.detail1 and lead.user_id and lead.user_id.name:
                 lead.detail1 = "%s's opportunity" % lead.user_id.name
 
+    @api.model
+    def default_get(self, fields_list):
+        res = super(Bug, self).default_get(fields_list)
+        if 'model_object' in fields_list:
+            res.update({
+                'model_object': self.env['ir.model'].search(
+                    [('model', '=', 'onesphere.tightening.result')]).id
+            })
+        if 'model_object_field' in fields_list:
+            res.update({
+                'model_object_field': self.env['ir.model.fields']._get_ids(
+                    'onesphere.tightening.result').get('measurement_final_torque')
+            })
+        return res
+
     def do_close(self):
         for item in self:
             item.is_closed = True
