@@ -9,6 +9,7 @@
                     <field name="name"/>
                     <field name="value"/>
                     <field name="value2"/>
+                    <field name="room_id"/>
                 </tree>
             </field>
         </record>
@@ -17,9 +18,13 @@
             <field name="model">bug.manage</field>
             <field name="arch" type="xml">
                 <form>
-                    <field name="name"/>
-                    <field name="value"/>
-                    <field name="value2"/>
+                    <group>
+                        <field name="name"/>
+                        <field name="value"/>
+                        <field name="value2"/>
+                        <field name="room_id"/>
+                    </group>
+
                 </form>
             </field>
         </record>
@@ -42,8 +47,8 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem name="Menu 1" id="bug-manage.menu_3" parent="bug-manage.menu_root"/>
-        <menuitem name="List" id="bug-manage.menu_3_list" parent="bug-manage.menu_3"
+        <menuitem name="管理会议" id="bug-manage.menu_3" parent="bug-manage.menu_root"/>
+        <menuitem name="会议" id="bug-manage.menu_3_list" parent="bug-manage.menu_3"
                   action="bug-manage.action_window_action"/>
 
     </data>

@@ -29,6 +29,7 @@
         'views/bugs.xml',
         'views/follower.xml',
         'views/bugmanage.xml',
+        'views/meetingroom.xml',
         'template/bugs_template.xml',
         'data/data.xml',
     ],
