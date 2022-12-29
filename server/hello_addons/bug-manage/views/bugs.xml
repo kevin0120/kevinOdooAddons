@@ -42,10 +42,6 @@
                             </page>
                         </notebook>
                     </sheet>
-
-                    <searchpanel>
-                        <field name="meeting_id" icon="fa-building" enable_counters="1"/>
-                    </searchpanel>
                 </form>
             </field>
         </record>

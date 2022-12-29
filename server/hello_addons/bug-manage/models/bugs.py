@@ -133,7 +133,7 @@ class Bug(models.Model):
     @api.model
     def search_panel_select_range(self, field_name, **kwargs):
         parent_name = 'parent_id'
-        bugs = self.env['bm.bug'].search([('meeting_id', '=', None)]).ids
+        bugs = self.env['bm.bug'].search([('meeting_id', '=', False)]).ids
         field_range = {
             '0': {'id': '0',
                   'display_name': '未知产品',

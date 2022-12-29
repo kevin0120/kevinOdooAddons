@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_bug-manage_bug-manage,bug-manage.bug-manage,model_bm_bug,base.group_user,1,1,1,1
+access_bug-manage_bm_bug,bug-manage.bm_bug,model_bm_bug,base.group_user,1,1,1,1
+access_bug-manage_bug_manage,bug-manage.bug_manage,model_bug_manage,base.group_user,1,1,1,1
+access_bug-manage_meeting_room,bug-manage.meeting_room,model_meeting_room,base.group_user,1,1,1,1
